@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 context = document.querySelector('#drawingCanvas').getContext("2d");
 
 //define the canvas
-let canvas = document.querySelector('#   ');
+let canvas = document.querySelector('#drawingCanvas');
 
 //global mousdown variable for when the mouse is pressed
 let mouseDown = false;
