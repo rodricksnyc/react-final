@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 
  });
 
-})
+});
 
 //we need to save the drawing we make
 
