@@ -9,7 +9,8 @@ const mongoose = require('mongoose');
 
 var app = express();
 
-mongoose.connect('');
+mongoose.connect('mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASSWORD + 'mongodb://<dbuser>:<dbpassword>@ds161529.mlab.com:61529/pixels');
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
