@@ -3,7 +3,6 @@ var router = express.Router();
 var Drawing = require('../models/drawing');
 
 
-
 //this is going to show all of the drawings
 
 router.get('/', function(req, res) {
@@ -13,7 +12,6 @@ router.get('/', function(req, res) {
  });
 
 })
-
 
 //we need to save the drawing we make
 
@@ -70,7 +68,6 @@ router.delete('/:id', function(req, res) {
     });
 
 });
-
 
 
 module.exports = router;
