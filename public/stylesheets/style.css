@@ -54,6 +54,7 @@ font-size: 38px;
   border-style: none;
 }
 .brushSizes {
+  font-size: 20px;
   background: linear-gradient(to left, #ff6699,  #ff99cc);
 }
 input {
