@@ -14,27 +14,27 @@
          </div>
         <div class="container">
             <div class="row">
-              <div class="col-8">
+              <div class="col-lg-6 col-xl-8 col-md-12 col-sm-12 col-xs-12">
                   <canvas id="drawingCanvas" width="800" height="600" name="canvas"></canvas>
               </div>
 
-              <div class="col-2">
+              <div class="col-lg-6 col-xl-2 col-md-12 col-sm-2 col-xs-2">
                  <p class="largeFont">Tools</p>
                  <p>Color</p>
                     <form method="POST" action="/drawings" name="colorPicker">
-                        <input type="color" value="#FF8BCE" name="color" class="colorSelector">
+                        <input type="color" value="#97FFFF" name="color" class="colorSelector">
                     </form>
-                <p>Brush Size</p>
+                <p style="margin-top:20px">Brush Size</p>
                     <div class="sizeSelector">
-                        <button class="brushSizes btn btn-secondary" id="smallBrush">Small Brush</button>
-                        <button class="brushSizes btn btn-secondary" id="mediumBrush">Medium Brush</button>
-                        <button class="brushSizes btn btn-secondary" id="largeBrush">Large Brush</button>
+                        <button class="brushSizes btn" id="smallBrush">Small Brush</button>
+                        <button class="brushSizes btn" id="mediumBrush">Medium Brush</button>
+                        <button class="brushSizes btn" id="largeBrush">Large Brush</button>
                     </div>
 
-      <p>Save/Delete</p>
+      <p style="margin-top:20px">Save/Delete</p>
 
     <form method="POST" action="/drawings">
-        <input type="submit" value="Save Drawing" name="saving" class="btn btn-danger"></input>
+        <input type="submit" value="Save Drawing" name="saving" class="btn"></input>
 
     </form>
 
@@ -47,7 +47,7 @@
         </div>
 
     </body>
-    <script
+  <script
    src="https://code.jquery.com/jquery-3.3.1.min.js"
    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
    crossorigin="anonymous"></script>
