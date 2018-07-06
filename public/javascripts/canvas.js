@@ -18,11 +18,58 @@ canvas.addEventListener('mouseup', function(event) {
   console.log(mouseDown);
 })
 
+const sizes = {
+  smallBrush: 5,
+  mediumBrush: 10,
+  largeBrush: 20
+}
+
+let brushSize = 5;
+// let color = 'teal';
+
+$(document).ready(function() {
+  $('.brushSizes').click(function(event) {
+    const sizeName = $(this).attr('id');
+
+    brushSize = sizes[sizeName]
+    console.log(sizeName)
+  })
 
 
+})
+
+canvas.addEventListener('mousemove', function(event){
+
+    function getPosition(element) {
+      let xPos = element.offsetLeft;
+      let yPos = element.offsetTop;
+      return { xPos, yPos }
+      console.log( xPos, yPos )
+    }
+
+  getPosition(canvas);
+   console.log('><><<')
+  if (mouseDown === true) {
+
+    let mouseX = event.offsetX;
+    let mouseY = event.offsetY;
+
+    console.log(mouseX);
+
+    context.fillStyle = color;
+
+    context.fillRect(
+      mouseX - (brushSize/2),
+      mouseY - (brushSize/2),
+      brushSize,
+      brushSize
 
 
+    )
+  }
 
+
+});
 
 
 
