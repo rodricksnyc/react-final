@@ -63,15 +63,20 @@ canvas.addEventListener('mousemove', function(event){
       mouseY - (brushSize/2),
       brushSize,
       brushSize
-
-
     )
   }
-
-
 });
 
 
+let color = document.querySelector("input[name='color']").value;
 
+//colorPicker to set the value of fillstyle.
+let colorPicker = document.querySelector("form[name='colorPicker']");
+  colorPicker.addEventListener('change', function(event){
+  event.preventDefault();
+  let colorField = document.querySelector("input[name='color']")
+  //console.log(color.value);
+  color = colorField.value;
+})
 
 });
