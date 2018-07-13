@@ -16,16 +16,18 @@
         </p>
         <div class="container">
             <div class="row">
-                    <% for (var i = 0; i < drawings.length; i++) { %>
-                        <% let drawing = drawings[i]; %>
+                    <script> for (var i = 0; i < drawings.length; i++) {
+                         let drawing = drawings[i];
+                       };
+                      </script>
                             <div class="col-sm-3 col-md-3 col-lg-3">
                                 <div>
-                                        <a href="/drawings/<%= drawing._id %>"><img class="image_preview" src=" <%=drawing.image %>"></a>
+                        <a href="/drawings/   drawing._id     "><img class="image_preview" src=" drawing.image "></a>
 
                                 </div>
 
                             </div>
-                    <% } %>
+
             </div>
         </div>
 
