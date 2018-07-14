@@ -14,7 +14,7 @@ import Form from "../../components/Form";
             <div class="row">
               <div class="col-8">
                   // <img id="imageSource" src="drawing.image"/>
-                  <Canvas id="drawingCanvas" width="800" height="600" name="canvas"></canvas>
+                  <Canvas/>
               </div>
 
 
