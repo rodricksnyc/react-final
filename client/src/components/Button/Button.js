@@ -1,8 +1,8 @@
 import React from "react";
 import "./Button.css";
-import "/utils/public/javascripts/canvas.js";
-import "/utils/public/javascripts/redrawCanvas.js";
-import "/utils/public/javascripts/saveImage.js";
+import "../public/javascripts/canvas.js";
+import "../public/javascripts/redrawCanvas.js";
+import "../public/javascripts/saveImage.js";
 
 const Button = props => (
   <button
