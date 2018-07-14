@@ -4,6 +4,10 @@ import React, { Component } from "react";
 
 
 
+const Main = () => (
+
+
+);
 
 
 
@@ -18,5 +22,4 @@ import React, { Component } from "react";
 
 
 
-
-export default Drawing;
+export default Main;
