@@ -2,69 +2,68 @@
 <html>
 
     <head>
-        <title>Drawings</title>
-        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+      <title>My Pixel App</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <link rel='stylesheet' href='/stylesheets/style.css' />
 
-        <link rel='stylesheet' href='/stylesheets/style.css' />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     </head>
 
     <body>
         <div class="container">
-            <p class="text-right">
+            <p>
                  <a class="aqua" href="/drawings">< Back to Drawings</a>
             </p>
          </div>
 
         <div class="container">
             <div class="row">
-              <div class="col-8">
-                  <img id="imageSource" src="<%= drawing.image %>"/>
+
+              <div class="col-lg-8 col-xl-8 col-md-12 col-sm-12 col-xs-12">
+                 <img id="imageSource" src="<%= drawing.image %>"/>
                   <canvas id="drawingCanvas" width="800" height="600" name="canvas"></canvas>
-              </div>
+             </div>
 
 
-                <div class="col-2">
-                 <p class="largeFont">Tools</p>
-                 <p>Color</p>
+
+        <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 col-xs-12">
+           <p class="largeFont">Tools</p>
+               <p>Color</p>
                     <form method="POST" action="/drawings/<%= drawing._id %>" name="colorPicker">
-                        <input type="color" value="#FF8BCE" name="color" class="colorSelector">
+                        <input type="color" value="#97FFFF" name="color" class="colorSelector">
                     </form>
-                <p>Brush Size</p>
-                    <div class="sizeSelector">
-                        <button class="brushSizes btn btn-secondary" id="smallBrush">Small Brush</button>
-                        <button class="brushSizes btn btn-secondary" id="mediumBrush">Medium Brush</button>
-                        <button class="brushSizes btn btn-secondary" id="largeBrush">Large Brush</button>
-                    </div>
+                    <p style="margin-top:20px">Brush Size</p>
+                        <div class="sizeSelector">
+                            <button class="brushSizes btn" id="smallBrush">Small <i class="fas fa-paint-brush" style="font-size: 12px;"></i></button>
+                            <button class="brushSizes btn" id="mediumBrush">Medium <i class="fas fa-paint-brush" style="font-size: 12px;"></i></button>
+                            <button class="brushSizes btn" id="largeBrush">Large <i class="fas fa-paint-brush" style="font-size: 12px;"></i></button>
+                        </div>
 
-                <p>Save/Delete</p>
-                <p>Title</p>
+               <p style="margin-top:20px">Save/Delete</p>
+                <h3>Title</h3>
                 <form method="POST" action="/drawings/<%= drawing._id %>">
                     <input type="hidden" name="_method" value="PUT">
-                    <!-- this is the title input
-                        Also need to remove the title
-                        from the model schema
 
-                        <input type="text" name="title" placeholder="<%= drawing.title %>">
-                    -->
-                    <input type="submit" value="Save Drawing" name="saving" class="btn btn-danger"></input>
+                    <input type="submit" value="Save Drawing" name="saving" class="btn"></input>
                 </form>
-                <br>
                 <form method="POST" action="/drawings/<%= drawing._id %>">
                     <input type="hidden" name="_method" value="DELETE">
-                    <input type="submit" value="Delete Drawing" class="btn btn-danger">
+                    <input type="submit" value="Delete Drawing" class="btn">
                 </form>
 
 
                 </div>
 
+
+
             </div>
         </div>
 
-
+    </body>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="/javascripts/canvas.js" ></script>
     <script src="/javascripts/redrawCanvas.js" ></script>
     <script src="/javascripts/saveImage.js" ></script>
-</body>
+
 </html>
