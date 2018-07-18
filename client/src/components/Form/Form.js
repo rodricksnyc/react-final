@@ -5,8 +5,7 @@ import "/utils/public/javascripts/redrawCanvas.js";
 import "/utils/public/javascripts/saveImage.js";
 
 const Form = props => (
-  <canvas>
-    <canvas/>
+  <p>fyvuyv</p>
 );
 
 export default Form;

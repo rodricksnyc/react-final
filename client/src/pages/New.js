@@ -8,7 +8,13 @@ class New extends Component {
   state = {
     color: 'blue',
     brushSize: 14
-  }
+  };
+
+
+
+
+
+
 
   render() {
 
