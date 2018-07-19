@@ -8,7 +8,8 @@ import New from "./pages/New";
 const App = () => (
   <Router>
       <Switch>
-        <Route exact path="/" component={New} />
+        <Route exact path="/" component={Main} />
+        <Route exact path="/new" component={New} />
 
         {/*
           <Route exact path="/drawings" component={Main} />

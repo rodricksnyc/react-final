@@ -3,18 +3,34 @@ import React, { Component } from "react";
 import Canvas from "../components/Canvas";
 import { Col, Row, Container } from "../components/Grid";
 // import Form from "../../components/Form";
+import API from '../utils/API'
 
 class New extends Component {
   state = {
     color: 'blue',
     brushSize: 14
-  };
+  }
 
+  handleFormSubmit = event => {
+    event.preventDefault()
+		const newDrawing = {
+			title: this.state.title,
+			image: document.getElementById('drawingCanvas').toDataURL()
+		}
 
+		API.saveDrawing(newDrawing)
+			.then(res => {
+				this.setState({
+					title: "",
+					image: ""
+				})
 
-
-
-
+				this.loadDrawings()
+			})
+			.catch(e => {
+				console.log(e);
+			})
+	}
 
   render() {
 
@@ -44,6 +60,8 @@ class New extends Component {
 
         </Col>
         </Row>
+
+        <button onClick={this.handleFormSubmit}> save it</button>
       </Container>
     )
   }

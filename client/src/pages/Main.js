@@ -1,6 +1,5 @@
-
-// import Button from "../../components/Button";
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import DeleteBtn from "../components/DeleteBtn";
@@ -13,6 +12,7 @@ import Canvas from "../components/Canvas";
 
 class Main extends Component {
 	state = {
+    drawings: [],
     title: String,
     image: String
 	};
@@ -28,10 +28,9 @@ class Main extends Component {
 	};
 
 	handleInputChange = event => {
-		// Pull the name and value properties off of the event.target (the element which triggered the event)
 		const { name, value } = event.target;
 
-		// Set the state for the appropriate input field
+
 		this.setState({
 			[name]: value
 		});
@@ -76,8 +75,7 @@ class Main extends Component {
 							<h1>Drawings</h1>
 						</Jumbotron>
 						<form>
-							<Input onChange={this.handleInputChange} value={this.state.title} name="title" placeholder="Title (required)" />
-							<Input value={this.state.image} onChange={this.handleInputChange} name="image" placeholder="Image (required)" />
+						
 							<FormBtn onClick={this.handleFormSubmit}>Save Image</FormBtn>
 						</form>
 					</Col>
