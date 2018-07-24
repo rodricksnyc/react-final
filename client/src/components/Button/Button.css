@@ -61,3 +61,33 @@ input {
   background: linear-gradient(to right, #ffb3d9, #ff66ff);
   border-style: none;
 }
+.centerItems {
+  display:flex;
+  flex-direction: column;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+h5 {
+
+  font-size: 18px;
+  font-family: 'Permanent Marker', cursive;
+  color:black;
+}
+input-placeholder {
+  color: black;
+}
+
+.pt-button {
+  background-color: #ff6699;
+  font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+  color:black;
+  height: 30px;
+
+}
+.pt-input {
+background-color: #ff6699;
+font-size: 20px;
+font-family: 'Permanent Marker', cursive;
+color:black;
+}

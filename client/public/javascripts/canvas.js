@@ -27,6 +27,16 @@ const sizes = {
 let brushSize = 5;
 // let color = 'teal';
 
+
+
+// document.getElementsByClassName('brushSizes').click(function(event) {
+//   var sizes = getElementByClassName('brushSizes');
+//   var sizeName = sizes.attr('id')
+//
+//   brushSize = sizes[sizeName]
+//   console.log(sizeName)
+// })
+
 $(document).ready(function() {
   $('.brushSizes').click(function(event) {
     const sizeName = $(this).attr('id');

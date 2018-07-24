@@ -7,7 +7,25 @@ import "./Canvas.css";
 class Canvas extends React.Component {
   componentDidMount() {
     var that = this;
-    const context = document.querySelector('#drawingCanvas').getContext("2d");
+    let context;
+    let dammit = setInterval(() => {
+      if(this.props.selectedDrawing){
+        console.log(this.props.selectedDrawing)
+        let base_image = new Image();
+        base_image.src = this.props.selectedDrawing.image;
+        context = document.querySelector('#drawingCanvas').getContext("2d");
+        base_image.onload = function(){
+          context.drawImage(base_image, 0, 0);
+        }
+        clearInterval(dammit)
+      }
+    }, 3000)
+
+    setTimeout(() => {
+      if(!this.props.selectedDrawing){
+        context = document.querySelector('#drawingCanvas').getContext("2d");
+      }
+    },3000)
 
     //define the canvas
     let canvas = document.querySelector('#drawingCanvas');

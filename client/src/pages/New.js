@@ -8,7 +8,8 @@ import API from '../utils/API'
 class New extends Component {
   state = {
     color: 'blue',
-    brushSize: 14
+    brushSize: 14,
+    drawings: []
   }
 
   handleFormSubmit = event => {
@@ -31,6 +32,13 @@ class New extends Component {
 				console.log(e);
 			})
 	}
+  loadDrawings = () => {
+    API.getDrawings().then((response) => {
+      this.setState({
+        drawings: response.data
+      })
+    }).catch(err => console.log(err));
+  };
 
   render() {
 

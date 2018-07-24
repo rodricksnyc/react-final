@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
+import { browserHistory, Router, Route } from 'react-router';
 import Canvas from "../components/Canvas";
 
 
@@ -14,17 +15,20 @@ class Main extends Component {
 	state = {
     drawings: [],
     title: String,
-    image: String
+    image: String,
+		// authenticated: false
 	};
 
 	componentDidMount() {
-		this.loadDrawings();
+		this.loadDrawings()
 	}
 
 	loadDrawings = () => {
-		API.getDrawings()
-			.then(response => this.setState({ drawings: response.data }))
-			.catch(err => console.log(err));
+		API.getDrawings().then((response) => {
+			this.setState({
+				drawings: response.data
+			})
+		}).catch(err => console.log(err));
 	};
 
 	handleInputChange = event => {
@@ -56,6 +60,11 @@ class Main extends Component {
 			})
 	}
 
+
+
+
+
+
 	handleDelete = (drawingId) => {
 		API.deleteDrawing(drawingId)
 			.then(() => {
@@ -67,15 +76,30 @@ class Main extends Component {
 	}
 
 	render() {
+		console.log(this.state.drawings)
+		const appendShit = () => {
+			if(this.state.drawings.length > 0){
+					return this.state.drawings.map((drawing) => {
+						return (
+							<a key={drawing._id} href={"/drawings/" + drawing._id}>
+								<img src={drawing.image}/>
+							</a>
+						)
+				})
+			} else {
+				return (<h3>No Results to Display</h3>)
+			}
+		}
 		return (
-			<Container fluid>
+			<Container>
+
 				<Row>
 					<Col size="md-6">
 						<Jumbotron>
 							<h1>Drawings</h1>
 						</Jumbotron>
 						<form>
-						
+
 							<FormBtn onClick={this.handleFormSubmit}>Save Image</FormBtn>
 						</form>
 					</Col>
@@ -83,22 +107,7 @@ class Main extends Component {
 						<Jumbotron>
 							<h1>My Drawings</h1>
 						</Jumbotron>
-						{this.state.drawings.length ? (
-							<List>
-								{this.state.drawings.map(drawing => (
-									<ListItem key={drawing._id}>
-										<a href={"/drawings/" + drawing._id}>
-											<strong>
-												{drawing.title} by {drawing.image}
-											</strong>
-										</a>
-										<DeleteBtn onClick={this.handleDelete(drawing._id)} />
-									</ListItem>
-								))}
-							</List>
-						) : (
-							<h3>No Results to Display</h3>
-						)}
+						{appendShit()}
 					</Col>
 				</Row>
 			</Container>

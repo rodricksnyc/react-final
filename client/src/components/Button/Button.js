@@ -1,15 +1,13 @@
 import React from "react";
 import "./Button.css";
-import "../public/javascripts/canvas.js";
-import "../public/javascripts/redrawCanvas.js";
-import "../public/javascripts/saveImage.js";
 
-const Button = props => (
+const Button = ({ type = "default", className, children, onClick }) => (
   <button
-    onClick={props.onClick}
-    className={`brushSizes ${props["data-value"]}`}
-    {...props}
-  />
+    onClick={onClick}
+    className={["btn btn-lg", `btn-${type}`, className].join(" ")}
+  >
+    {children}
+  </button>
 );
 
 export default Button;

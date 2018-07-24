@@ -2,32 +2,20 @@ var express = require('express');
 var router = express.Router();
 var Drawing = require('../models/drawing');
 
-
-// this is going to show all of the drawings
-
-// router.get('/', function(req, res) {
-//  Drawing.find(function(err, drawings) {
-//    res.render('drawings/index', {drawings: drawings});
-//
-//  });
-//
-// });
+ router.get('/api/drawings', function(req, res) {
+  Drawing.find().then((drawings) => {
+    res.json(drawings)
+  });
+ });
 
 // we need to save the drawing we make
 
-router.post('/', function(req, res) {
+router.post('/save', function(req, res) {
   let title = req.body.title;
-  let image = req.body.saving;
-
-
+  let image = req.body.image;
   Drawing.create({title: title, image: image}, function(err) {
-    // res.redirect('/drawings');
-    // console.log(req.body);
     res.send(200)
-
-
   });
-
 });
 
 // display the page for user to create a new drawing
@@ -38,7 +26,7 @@ router.post('/', function(req, res) {
 
 // id displays one drawing
 
-// router.get('/:id', function(req, res) {
+// router.get('/drawing/:id', function(req, res) {
 //   let id = req.params.id;
 //
 //   Drawing.findById(id, function(err, drawing) {
@@ -51,7 +39,7 @@ router.post('/', function(req, res) {
 router.put('/:id', function(req, res) {
   let id = req.params.id;
   let title = req.body.title;
-  let image = req.body.saving;
+  let image = req.body.image;
 
   Drawing.findByIdAndUpdate(id, { title: title, image: image }, function(err, drawing) {
       res.redirect('/drawings');
