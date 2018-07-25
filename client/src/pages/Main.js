@@ -61,10 +61,6 @@ class Main extends Component {
 	}
 
 
-
-
-
-
 	handleDelete = (drawingId) => {
 		API.deleteDrawing(drawingId)
 			.then(() => {
@@ -82,7 +78,9 @@ class Main extends Component {
 					return this.state.drawings.map((drawing) => {
 						return (
 							<a key={drawing._id} href={"/drawings/" + drawing._id}>
-								<img src={drawing.image}/>
+								<img src={drawing.image} style={{
+									backgroundColor: "black",  marginBottom:"10px"
+								}} />
 							</a>
 						)
 				})
@@ -94,20 +92,22 @@ class Main extends Component {
 			<Container>
 
 				<Row>
-					<Col size="md-6">
-						<Jumbotron>
-							<h1>Drawings</h1>
+					<Col size="md-12">
+						<Jumbotron addClass="header">
+							<h1>My Pixel App	<i class="fas fa-paint-brush"></i></h1>
+							<a href={"/new/"}>
+							<strong>
+							<p style={{fontSize:"34px"}}>Create a New Drawing</p>
+							</strong>
+							</a>
 						</Jumbotron>
 						<form>
 
-							<FormBtn onClick={this.handleFormSubmit}>Save Image</FormBtn>
+							{/*<FormBtn onClick={this.handleFormSubmit}>Save Image</FormBtn>*/}
 						</form>
 					</Col>
-					<Col size="md-6 sm-12">
-						<Jumbotron>
-							<h1>My Drawings</h1>
-						</Jumbotron>
-						{appendShit()}
+					<Col size="col-lg-12 md-12 sm-12">
+						<div className="black">{appendShit()}</div>
 					</Col>
 				</Row>
 			</Container>

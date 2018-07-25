@@ -11,7 +11,8 @@ import Update from "./pages/Update.js";
 const App = () => (
   <Router>
       <Switch>
-        <Route exact path="/" component={Index} />
+        <Route exact path="/" component={Main} />
+          <Route exact path="/index" component={Index} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/drawings" component={Main} />
         <Route exact path="/new" component={New} />

@@ -70,7 +70,7 @@ class New extends Component {
     return (
       <Container>
           <Row>
-          	<Col size="lg-8 xl-8 md-12 sm-12 xs-12">
+        <Col size="lg-8 xl-8 md-12 sm-12 xs-12">
         <Canvas selectedDrawing={this.state.selectedDrawing} color={this.state.color} brushSize={this.state.brushSize} />
         <button onClick={() => this.setState({color: 'purple'})}>purple</button>
         <button onClick={() => this.setState({color: 'wheat'})}>wheat</button>
