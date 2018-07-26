@@ -55,6 +55,11 @@ class New extends Component {
           <Row>
             <Jumbotron addClass="header">
           	<h1>My Pixel App	<i class="fas fa-paint-brush"></i></h1>
+            <a href={"/drawings/"}>
+            <strong>
+            <p style={{fontSize:"34px"}}><i class="fas fa-angle-left"></i> Back to My Drawings</p>
+            </strong>
+            </a>
             </Jumbotron>
           <Col size="lg-10 md-12 xs-12">
               <Canvas color={this.state.color} brushSize={this.state.brushSize} />
