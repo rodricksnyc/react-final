@@ -66,7 +66,7 @@ class New extends Component {
           </Col>
 
       	<Col size="lg-2 md-12 xs-12">
-        <p style={{fontSize:"50px"}}>Tools</p>
+        <p style={{fontSize:"52px"}}>Tools</p>
         <p style={{fontSize:"30px"}}>Color</p>
         <input type="color" name="color" className="colorSelector"
           onChange={e => {
@@ -75,13 +75,13 @@ class New extends Component {
         />
         <br/><br/>
         <p style={{fontSize:"30px", color:'black'}}>Brush Size</p>
-        <button style={{width:"120px", background:'#ff66ff', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 5})}>Small</button>
+        <button style={{width:"140px", background:'#ff66ff', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 5})}>Small</button>
         <br/>
-        <button style={{width:"120px", background:"#ffb3d9", color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 10})}>Medium</button>
+        <button style={{width:"140px", background:"#ffb3d9", color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 10})}>Medium</button>
         <br/>
-        <button style={{width:"120px", background:'#ff6699', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 25})}>Large</button>
+        <button style={{width:"140px", background:'#ff6699', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 25})}>Large</button>
         <br/><br/>
-        <button onClick={this.handleFormSubmit}>Save Drawing</button>
+        <button style={{width:"140px", background:'#ff66ff', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={this.handleFormSubmit}>Save Drawing</button>
         </Col>
         </Row>
 
