@@ -2,14 +2,13 @@
   background-color: white;
 }
 
-.black {
-  width:800px;
-  height:600px;
-  margin-bottom:30px;
-}
-
 .sizeSelector {
     display: flex;
     flex-direction: column;
     width: 150px;
+}
+img {
+  width:334px;
+  display: inline-block;
+  margin-right: 1em;
 }

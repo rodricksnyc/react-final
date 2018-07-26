@@ -106,8 +106,8 @@ class Main extends Component {
 							{/*<FormBtn onClick={this.handleFormSubmit}>Save Image</FormBtn>*/}
 						</form>
 					</Col>
-					<Col size="col-lg-12 md-12 sm-12">
-						<div className="black">{appendShit()}</div>
+					<Col size="lg-12">
+						<div>{appendShit()}</div>
 					</Col>
 				</Row>
 			</Container>

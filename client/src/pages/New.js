@@ -76,10 +76,10 @@ class New extends Component {
         <br/>
         <button style={{width:"120px", background:'#ff6699', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 25})}>Large</button>
         <br/><br/>
-        <button onClick={this.handleFormSubmit}> save it</button>
+        <button onClick={this.handleFormSubmit}>Save Drawing</button>
         </Col>
         </Row>
-  
+
       </Container>
     )
   }
