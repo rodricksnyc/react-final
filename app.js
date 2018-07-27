@@ -10,7 +10,8 @@ const mongoose = require('mongoose');
 
 var app = express();
 // var mongoose = require('mongoose');
-mongoose.connect('mongodb://elizabeth123:elizabeth123@ds137611.mlab.com:37611/express-pixel-app');
+mongoose.connect('mongodb://elizabeth123:elizabeth123@ds243049.mlab.com:43049/react-express-pixels');
+
 
 // var port = normalizePort(process.env.PORT || '3000');
 // app.set('views', path.join(__dirname, 'views'));
