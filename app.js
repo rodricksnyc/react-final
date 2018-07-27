@@ -12,7 +12,7 @@ var app = express();
 // var mongoose = require('mongoose');
 mongoose.connect('mongodb://elizabeth123:elizabeth123@ds137611.mlab.com:37611/express-pixel-app');
 
-var port = normalizePort(process.env.PORT || '3000');
+// var port = normalizePort(process.env.PORT || '3000');
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'ejs');
 
