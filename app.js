@@ -32,6 +32,15 @@ var drawingsRouter = require('./routes/drawings');
 app.use('/', index);
 app.use('/drawings', drawingsRouter);
 
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
 // app.use(function(req, res, next) {
 //   var err = new Error('ERROR BITCH. SUCK A DICK!');
 //   err.status = 404;
@@ -46,15 +55,6 @@ app.use('/drawings', drawingsRouter);
 //   res.render('error');
 //
 // });
-
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('client/build'));
-}
-
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
-
 
 
 module.exports = app;
