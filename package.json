@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-     "start": "node app.js",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -32,6 +32,7 @@
     "method-override": "^2.3.10",
     "mongoose": "^5.1.6",
     "morgan": "^1.9.0",
+    "normalize-port": "^1.0.0",
     "path": "^0.12.7",
     "pify": "^3.0.0",
     "popper.js": "^1.14.3",

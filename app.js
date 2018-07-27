@@ -5,13 +5,14 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const normalizePort = require('normalize-port');
 const mongoose = require('mongoose');
 
 var app = express();
 // var mongoose = require('mongoose');
 mongoose.connect('mongodb://elizabeth123:elizabeth123@ds137611.mlab.com:37611/express-pixel-app');
 
-
+var port = normalizePort(process.env.PORT || '3000');
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'ejs');
 
@@ -47,9 +48,3 @@ app.use('/drawings', drawingsRouter);
 // });
 
 module.exports = app;
-
-
-
-app.listen(3001, () => {
-  console.log("The app is running on Port 3001 BITCH!");
-});
