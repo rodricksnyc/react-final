@@ -81,7 +81,7 @@ class New extends Component {
         <br/>
         <button style={{width:"140px", background:'#ff6699', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 25})}>Large</button>
         <br/><br/>
-        <button style={{width:"140px", background:'#ff66ff', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={this.handleFormSubmit}>Save Drawing</button>
+        <button style={{width:"140px", background:'#ff99cc', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={this.handleFormSubmit}>Save Drawing</button>
         </Col>
         </Row>
 

@@ -5,6 +5,7 @@ import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
 // import Form from "../../components/Form";
 import API from '../utils/API'
+import { app, base } from '../base.js';
 
 class New extends Component {
   state = {
@@ -28,8 +29,10 @@ class New extends Component {
           image: ""
         })
 
+
         //this.updateDrawings()
       })
+      
       .catch(e => {
         console.log(e);
       })
@@ -58,6 +61,40 @@ class New extends Component {
     this.loadDrawings();
   }
   componentWillMount(){
+    // this.removeAuthListener = app.auth().onAuthStateChanges(
+    //   (user) =>  {
+    //     if(user) {
+    //       this.setState({
+    //         authenticated: true,
+    //         loading: true
+    //       })
+    //     } else {
+    //       this.setState({
+    //         authenticated: false,
+    //         loading: false
+    //       })
+    //     }
+    //
+    //   })
+
+// componentWillUnmount(){
+// this.removeAuthListener();
+//
+// }
+//
+// render() {
+//   if (this.state.loading === true) {
+//     return (
+//       <div><p>Loading</p>
+//       </div>
+//
+//     )
+//
+//   }
+//
+// }
+
+
     setTimeout(() => {
       if(this.state.drawings.length > 0){
         this.state.drawings.forEach((drawing) => {
