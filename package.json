@@ -2,14 +2,11 @@
   "name": "final-gw-project",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "engines": {
-    "node": "6.2.2"
+  "main": "app.js"
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
    "start:prod": "./bin/www",
-   "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
    "client": "cd client && npm run start",
    "seed": "node scripts/seedDB.js",
    "install": "cd client && npm install",
