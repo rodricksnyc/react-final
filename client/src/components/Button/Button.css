@@ -61,12 +61,12 @@ input {
   background: linear-gradient(to right, #ffb3d9, #ff66ff);
   border-style: none;
 }
-.centerItems {
+/* .centerItems {
   display:flex;
   flex-direction: column;
   margin-left: 2%;
   margin-top: 2%;
-}
+} */
 h5 {
 
   font-size: 18px;

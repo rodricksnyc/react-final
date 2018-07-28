@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
+import "./Login.css";
 // import { Link } from 'react-router-dom';
 // import { Toaster, Intent } from '@blueprintjs/core';
 
@@ -66,11 +67,12 @@ render() {
 return (
 
 <div className="centerItems">
-<button style={{width:"20%"}} className="pt-button pt-intent-primary"
-onClick={() => {this.authWithEmail()}}>
+{/*<button style={{width:"20%"}} className="pt-button pt-intent-primary"
+}onClick={() => {this.authWithEmail()}}>
 Login with Email
-</button>
-<hr style={{marginTop:"10px", marginBottom:"10px"}}/>
+</button>*/}
+<img style={{width:"50%", height:"50%"}} src="/img/paint.png" />
+
 
 
 
@@ -80,20 +82,20 @@ Login with Email
   }}
   ref={(form) => { this.loginForm = form } }
 >
-<div style={{marginBottom:"10px"}} className="pt-callout pt-icon-info-sign">
-<h5>*If you don't have an account already,</h5>
-<h5>please create an account below.</h5>
-</div>
-<label className="pt-label"><input style={{width: "100%"}} className="pt-input" name="email"
+<div style={{marginLeft: "0px"}} className="pinkDiv">
+<h5 style={{fontSize: "26px"}}>*If you don't have an account already,</h5>
+<h5 style={{fontSize: "26px"}}>please create an account below</h5>
+
+<label className="pt-label"><input className="pt-input" name="email"
 type="email" ref={(input) => { this.emailInput = input}} placeholder="Email"></input>
 </label>
 <br/>
-<label className="pt-label"><input style={{width: "100%"}} className="pt-input" name="password"
+<label className="pt-label"><input className="pt-input" name="password"
 type="password" ref={(input) => { this.passwordInput = input}} placeholder="Password"></input>
 </label>
 <br/>
-<input style={{width: "15%"}} type="submit" className="pt-button pt-intent-primary" value="Login"></input>
-
+<input style={{width: "30%", backgroundColor:"#FF88BE"}} type="submit" className="pt-button pt-intent-primary" value="Login"></input>
+</div>
 
 </form>
 
