@@ -32,7 +32,7 @@ class New extends Component {
 
         //this.updateDrawings()
       })
-      
+
       .catch(e => {
         console.log(e);
       })
