@@ -35,11 +35,11 @@ app.use('/drawings', drawingsRouter);
 
 
 if (process.env.NODE_ENV === 'production') {
-	app.use(express.static(path.join(__dirname, '/../public/build')));
+	app.use(express.static('client/public'));
 }
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/../client/public/index.html'));
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/public', 'index.html'));
 });
 
 // app.use(function(req, res, next) {
