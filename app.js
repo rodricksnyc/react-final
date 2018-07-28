@@ -34,13 +34,13 @@ app.use('/', index);
 app.use('/drawings', drawingsRouter);
 
 
-// if (process.env.NODE_ENV === 'production') {
-// 	app.use(express.static('client/src'));
-// }
-//
-// app.get('*', (request, response) => {
-// 	response.sendFile(path.join(__dirname, 'client/src', 'index.html'));
-// });
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/src'));
+}
+
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/src', 'index.html'));
+});
 
 // app.use(function(req, res, next) {
 //   var err = new Error('ERROR BITCH. SUCK A DICK!');
