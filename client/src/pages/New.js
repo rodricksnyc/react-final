@@ -57,7 +57,8 @@ class New extends Component {
           	<h1>My Pixel App	<i class="fas fa-paint-brush"></i></h1>
             <a href={"/drawings/"}>
             <strong>
-            <p style={{fontSize:"34px"}}><i class="fas fa-angle-left"></i> Back to My Drawings</p>
+            <p style={{fontSize:"34px"}}>
+             Back to My Drawings</p>
             </strong>
             </a>
             </Jumbotron>
