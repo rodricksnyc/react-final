@@ -92,7 +92,7 @@ class Main extends Component {
 			<Container>
 
 				<Row>
-					<Col size="md-12">
+					<Col size="xs-12">
 						<Jumbotron addClass="header">
 							<h1 style={{color:"black"}}>My Pixel App	<i class="fas fa-paint-brush"></i></h1>
 							<a href={"/new/"}>
