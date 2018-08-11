@@ -85,7 +85,7 @@ class Main extends Component {
 						)
 				})
 			} else {
-				return (<h3>No Results to Display</h3>)
+				return (<h3>Hang Tight! ❤️ </h3>)
 			}
 		}
 		return (
