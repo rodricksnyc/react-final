@@ -85,7 +85,7 @@ class Main extends Component {
 						)
 				})
 			} else {
-				return (<h3>Hang Tight! ❤️ </h3>)
+				return (<p style={{fontSize:"34px", textAlign: "center"}}>Hang Tight! ❤️ </p>)
 			}
 		}
 		return (

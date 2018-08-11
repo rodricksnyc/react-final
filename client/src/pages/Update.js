@@ -132,7 +132,7 @@ class New extends Component {
         </Col>
 
 
- <Col size="lg-2 md-2 xs-6">
+       <Col size="lg-2 md-2 xs-6">
         <p className="tool" style={{fontSize:"52px", color:"black"}}>Tools</p>
 
 
