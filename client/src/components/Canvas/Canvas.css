@@ -18,6 +18,8 @@
   left:0;
   margin-bottom: 50px;
 }
+
+
 p {
   font-size: 24px;
   font-family: 'Permanent Marker', cursive;
@@ -61,4 +63,16 @@ font-size: 38px;
 input {
   background: linear-gradient(to right, #ffb3d9, #ff66ff);
   border-style: none;
+}
+
+
+
+@media only screen and (max-width: 667px) and (min-width: 320px) {
+#drawingCanvas {
+  width:334px;
+}
+.tool {
+  display: none;
+}
+
 }

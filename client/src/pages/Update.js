@@ -127,19 +127,23 @@ class New extends Component {
           </strong>
           </a>
           </Jumbotron>
-        <Col size="lg-10 md-12 xs-12">
+        <Col size="lg-10 md-10 xs-12">
         <Canvas selectedDrawing={this.state.selectedDrawing} color={this.state.color} brushSize={this.state.brushSize} />
         </Col>
 
-        <Col size="lg-2 md-12 xs-12">
-        <p style={{fontSize:"52px"}}>Tools</p>
-        <p style={{fontSize:"30px"}}>Color</p>
+
+ <Col size="lg-2 md-2 xs-6">
+        <p className="tool" style={{fontSize:"52px", color:"black"}}>Tools</p>
+
+
+        <p style={{fontSize:"30px", color:"black"}}>Color</p>
         <input type="color" name="color" className="colorSelector"
           onChange={e => {
             this.setState({color: e.target.value})
           }}
         />
-        <br/><br/>
+        </Col>
+        <Col size="lg-2 md-2 xs-6">
         <p style={{fontSize:"30px", color:'black'}}>Brush Size</p>
         <button style={{width:"140px", background:'#ff66ff', color:'black', borderRadius:'5px', fontSize:"24px", fontFamily: 'Permanent Marker', marginBottom:'10px'}} onClick={() => this.setState({brushSize: 5})}>Small</button>
         <br/>
