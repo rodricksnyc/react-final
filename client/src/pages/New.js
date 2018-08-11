@@ -67,8 +67,8 @@ class New extends Component {
           </Col>
 
       	<Col size="lg-2 md-12 xs-6">
-        <p  className="tool" style={{fontSize:"52px"}}>Tools</p>
-        <p style={{fontSize:"30px"}}>Color</p>
+        <p  className="tool" style={{fontSize:"52px", color:"black"}}>Tools</p>
+        <p style={{fontSize:"30px", color:"black"}}>Color</p>
         <input type="color" name="color" className="colorSelector"
           onChange={e => {
             this.setState({color: e.target.value})
