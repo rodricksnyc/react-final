@@ -94,7 +94,7 @@ class Main extends Component {
 				<Row>
 					<Col size="md-12">
 						<Jumbotron addClass="header">
-							<h1>My Pixel App	<i class="fas fa-paint-brush"></i></h1>
+							<h1 >My Pixel App	<i class="fas fa-paint-brush"></i></h1>
 							<a href={"/new/"}>
 							<strong>
 							<p style={{fontSize:"34px"}}>Create a New Drawing</p>

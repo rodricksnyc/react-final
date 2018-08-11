@@ -120,7 +120,7 @@ class New extends Component {
       <Container>
           <Row>
           <Jumbotron addClass="header">
-          <h1>My Pixel App	<i class="fas fa-paint-brush"></i></h1>
+          <h1 style={{color:"black"}}>My Pixel App	<i class="fas fa-paint-brush"></i></h1>
           <a href={"/drawings/"}>
           <strong>
           <p style={{fontSize:"34px"}}><i class="fas fa-angle-left"></i> Back to My Drawings</p>
