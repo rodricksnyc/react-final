@@ -5,12 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-   "start:prod": "./bin/www",
-   "start:dev": "./bin/www",
-   "client": "cd client && npm run start",
-   "install": "cd client && npm install",
-   "build": "cd client && npm run build",
-   "heroku-postbuild": "npm run build",
+    "start:prod": "./bin/www",
+    "start:dev": "./bin/www",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
